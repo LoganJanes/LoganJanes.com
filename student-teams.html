@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Student Teams | Logan Janes</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+<div id="header"></div>
+
+<main>
+  <h2>Student Teams</h2>
+  <ul>
+    <li><strong>Eastern Edge Robotics</strong> – Software Developer<br />
+      Developed and maintained GUI systems using React and Redux for marine robotics.</li>
+
+    <li><strong>Memorial Baja</strong> – Software Developer<br />
+      Contributed to embedded telemetry and real-time system logging.</li>
+
+    <li><strong>MUNStars-1 CubeSat</strong> – Software and Embedded Systems (Pending)<br />
+      Collaborating with C-CORE to support satellite software development.</li>
+  </ul>
+</main>
+
+<div id="footer"></div>
+
+<script>
+  fetch("header.html")
+    .then(res => res.text())
+    .then(data => document.getElementById("header").innerHTML = data);
+
+  fetch("footer.html")
+    .then(res => res.text())
+    .then(data => document.getElementById("footer").innerHTML = data);
+</script>
+
+</body>
+</html>
