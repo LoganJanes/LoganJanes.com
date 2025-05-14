@@ -73,9 +73,22 @@ section {
 
 footer {
   background-color: #f0f0f0;
+  justify-content: space-between;
   text-align: left;
+  align-items: center;
+  display: flex;
   padding: 1rem;
   margin-top: auto;
+  flex-wrap: nowrap;
+}
+
+.footer-left {
+  white-space: nowrap;
+  margin: 0; 
+}
+
+.right-section:hover {
+    background-color: #0055a5;
 }
 
 .resume-button {
@@ -226,8 +239,6 @@ footer {
 }
 
 .one-line {
-  
- 
   font: bold;
   color: #000;
 }
@@ -240,5 +251,32 @@ footer {
     Padding-left: 50px;
 }
 
+.social-links {
+  display: flex;
+  gap: 15px;
+  align-items: center;
+  margin-top: 10px;
+  
+}
 
+.social-button img {
+  width: 40px;
+  height: 40px;
+  transition: filter 0.3s ease, transform 0.2s ease;
+  border-radius: 50%;
+}
 
+.social-button:hover img {
+  filter: brightness(0.8);
+  transform: scale(1.05);  
+}
+
+.social-button:active img {
+  filter: brightness(0.6); 
+}
+
+.center-section {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+}
