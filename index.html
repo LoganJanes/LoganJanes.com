@@ -2,30 +2,45 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>About Me | Logan Janes</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Logan Janes – About Me</title>
   <link rel="stylesheet" href="style.css" />
 </head>
 <body>
+  <div id="header-container"></div>
 
-<div id="header"></div>
+  <main class="about-section">
+    <div class="about-text">
+      <h1>Hello, I'm Logan Janes!</h1>
+      <p>I am a fourth year computer engineering student at Memorial University with a strong interest in full-stack development and embedded systems programming!</p>
+      <a href="assets/resume/Logan_Janes_Resume.pdf" target="_blank" class="about-button">Resume</a>
+      <div class="contact-box">
+  <p>Contact Me: <a href="mailto:logan.janes2003@gmail.com">logan.janes2003@gmail.com</a></p>
+</div>
+    </div>
+    <div class="about-images-grid-collage">
+      <img src="assets/images/Logan2.jpg" alt="Logan2">
+      <img src="assets/images/Logan3.jpg" alt="Logan3">
+      <img src="assets/images/Logan4.jpg" alt="Logan4">
+      <img src="assets/images/Logan5.jpg" alt="Logan5">
+      <img src="assets/images/Logan1.jpg" alt="Logan6">
+      <img src="assets/images/Logan6.jpg" alt="Logan1">
+      <img src="assets/images/Logan7.jpg" alt="Logan7">
+      <img src="assets/images/Logan9.jpg" alt="Logan8">
+      <img src="assets/images/Logan8.jpg" alt="Logan9">
+    </div>
+  </main>
 
-<main>
-  <h2>About Me</h2>
-  <p>I’m a fourth-year Computer Engineering student at Memorial University of Newfoundland with a passion for software development, embedded systems, and team collaboration. I’ve worked with technologies like React, Node.js, Docker, PostgreSQL, and embedded C for the Raspberry Pi Pico.</p>
-</main>
+  <div id="footer-container"></div>
 
-<div id="footer"></div>
+  <script>
+    fetch('header.html')
+      .then(response => response.text())
+      .then(data => document.getElementById('header-container').innerHTML = data);
 
-<script>
-  fetch("header.html")
-    .then(res => res.text())
-    .then(data => document.getElementById("header").innerHTML = data);
-
-  fetch("footer.html")
-    .then(res => res.text())
-    .then(data => document.getElementById("footer").innerHTML = data);
-</script>
-
+    fetch('footer.html')
+      .then(response => response.text())
+      .then(data => document.getElementById('footer-container').innerHTML = data);
+  </script>
 </body>
 </html>
