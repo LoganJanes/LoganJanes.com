@@ -11,8 +11,6 @@ html, body {
   height: 100%;
   margin: 0;
   padding: 0;
-  display: flex;
-  flex-direction: column;
 }
 
 main {
@@ -198,14 +196,13 @@ footer {
 .experience-entry {
   display: flex;
   gap: 40px;
-  flex-wrap: wrap;
   align-items: flex-start;
+  flex-wrap: wrap;
 }
 
 .experience-text {
   flex: 1;
   min-width: 300px;
-  padding: 20px;
   max-width: 50%;
 }
 
@@ -225,7 +222,7 @@ footer {
 .experience-text p {
   margin-bottom: 10px;
   line-height: 1.6;
-  padding-top: 50px;
+  
 }
 
 .one-line {
@@ -243,7 +240,5 @@ footer {
     Padding-left: 50px;
 }
 
-.one-line {
-  white-space: nowrap;
-}
+
 
