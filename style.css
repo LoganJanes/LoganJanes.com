@@ -110,33 +110,6 @@ footer {
   flex-wrap: wrap;
 }
 
-.experience-section {
-  display: flex;
-  justify-content: space-between;
-  align-items: flex-start;
-  padding: 60px 40px;
-  border-radius: 10px;
-  max-width: 1200px;
-  margin: 40px auto;
-  gap: 40px;
-  flex-wrap: wrap;
-}
-.experience-text {
-  flex: 1;
-  height: 200px;
-  padding: 100px 0;
-  
-}
-
-.experience-image {
-  flex: 1;
-  height: 200px;
-  padding: 100px 0;
-  padding-left: 200px;
-}
-
-
-
 .about-text {
   flex: 1;
   min-width: 300px;
@@ -210,13 +183,56 @@ footer {
   border-radius: 10px;
 }
 
-.contact-box a {
-  color: #007bff;
-  text-decoration: none;
+
+.experience-section {
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+  padding: 60px 40px;
+  border-radius: 10px;
+  max-width: 1200px;
+  margin: 40px auto;
+  background-color: #fff;
 }
 
-.contact-box a:hover {
-  text-decoration: underline;
+.experience-entry {
+  display: flex;
+  gap: 40px;
+  flex-wrap: wrap;
+  align-items: flex-start;
+}
+
+.experience-text {
+  flex: 1;
+  min-width: 300px;
+  padding: 20px;
+  max-width: 50%;
+}
+
+.experience-image {
+  flex: 1;
+  min-width: 300px;
+  padding: 20px;
+}
+
+.experience-image img {
+  width: 100%;
+  height: auto;
+  border-radius: 10px;
+  object-fit: contain;
+}
+
+.experience-text p {
+  margin-bottom: 10px;
+  line-height: 1.6;
+  padding-top: 50px;
+}
+
+.one-line {
+  
+ 
+  font: bold;
+  color: #000;
 }
 
 .title {
@@ -230,3 +246,4 @@ footer {
 .one-line {
   white-space: nowrap;
 }
+
