@@ -15,6 +15,13 @@ html, body {
   flex-direction: column;
 }
 
+img {
+  width: 100%;
+  height: auto;
+  display: block;
+  max-width: 100%;
+}
+
 main {
   flex: 1 0 auto;
 }
@@ -24,6 +31,7 @@ main {
   flex: 1 0 auto;
   display: flex;
   flex-direction: column;
+  background-color: #000;
 }
 
 .site-header {
@@ -120,7 +128,6 @@ footer {
   display: flex;
   justify-content: space-between;
   align-items: flex-start;
-  background-color: #000;
   color: #fff;
   padding: 60px 40px;
   border-radius: 10px;
@@ -164,12 +171,20 @@ footer {
   color: #000;
 }
 
+.about-image {
+  width: 300px;
+  height: auto;
+}
+
+
 .about-images-grid {
   flex: 1;
   display: flex;
   flex-direction: column;
   gap: 20px;
   min-width: 300px;
+  max-width: 500px;
+  image-rendering: auto;
 }
 
 .about-images-grid .row {
@@ -186,7 +201,9 @@ footer {
 
 .about-images-grid .single {
   justify-content: center;
+  
 }
+
 
 .about-images-grid-collage {
   display: grid;
@@ -217,21 +234,22 @@ footer {
 
 .experience-entry {
   display: flex;
-  gap: 40px;
+  flex-wrap: nowrap;
   align-items: flex-start;
-  flex-wrap: wrap;
+  gap: 30px;
+  margin-bottom: 50px;
 }
 
 .experience-text {
   flex: 1;
-  min-width: 300px;
-  max-width: 50%;
+  min-width: 0;
+  text-align: justify;
 }
 
 .experience-image {
-  flex: 1;
-  min-width: 300px;
-  padding: 20px;
+  width: 500px;           
+  flex-shrink: 0;         
+  border-radius: 10px;
 }
 
 .experience-image img {
@@ -288,4 +306,8 @@ footer {
   display: flex;
   justify-content: center;
   width: 100%;
+}
+
+.background {
+  background-color: #000;
 }
