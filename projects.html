@@ -19,18 +19,47 @@
       <p><span class="one-line"><strong> Job Board Website</strong> Interncomp</span></p>
       <p>Interncomp is job board website which makes use of API calling to populate the website with company information, internship oppurtunities as well as user reviews and ratings.
         From this project I was able to gain full-stack development as well as experience in creating a dockerized environment. 
+        
       </p>
+      <div class="skills">
+  <span class="skill-bubble">Full-Stack Development</span>
+  <span class="skill-bubble">Typescript</span>
+  <span class="skill-bubble">ReactJS</span>
+  <span class="skill-bubble">NestJS</span>
+  <span class="skill-bubble">REST APIs</span>
+  <span class="skill-bubble">Docker</span>
+  <span class="skill-bubble">UI Design</span>
+  <span class="skill-bubble">Website Design</span>
+</div>
     </div>
-    <div class="experience-image">
-      <img src="assets/images/Interncomp1.png" alt="Interncomp1">
-    </div>
+   <div class="experience-image">
+  <img src="assets/images/Interncomp1.png" alt="Interncomp1" class="interncomp1">
+  <div class="interncomp-row">
+    <img src="assets/images/Interncomp2.png" alt="Interncomp2" class="interncomp-sub">
+    <img src="assets/images/Interncomp3.png" alt="Interncomp3" class="interncomp-sub">
   </div>
+  </div>
+</div>
 
   <div class="experience-entry">
     <div class="experience-text">
       <p><span class="one-line"><strong> Predictive Health Analytics Website</strong></span></p>
       <p>The project I am currently working on is a predictive health analytics responsive web app using Next.js and Tailwind CSS and flask which makes use of a scikit-learn machine learning model that
-      evaluates user-inputted health data to assess the risk of heart disease and other health risks. I am also working on implementing user log in and authentication as well as google account authentication. This project is still in development.  </p>
+      evaluates user-inputted health data to assess the risk of heart disease and other health risks. I am also working on implementing user log in and authentication as well as google account authentication. This project is still in development.
+      </p>
+      <div class="skills">
+  <span class="skill-bubble">NextJS</span>
+  <span class="skill-bubble">Javascript</span>
+  <span class="skill-bubble">Tailwind</span>
+  <span class="skill-bubble">Python</span>
+  <span class="skill-bubble">Flask</span>
+  <span class="skill-bubble">scikit-learn</span>
+  <span class="skill-bubble">Machine Learning</span>
+  <span class="skill-bubble">Data Science</span>
+  <span class="skill-bubble">Google OAuth</span>
+  <span class="skill-bubble">Responsive Design</span>
+  <span class="skill-bubble">Website Design</span>
+</div>
     </div>
     <div class="experience-image">
       <img src="assets/images/HC3.png" alt="Health">
@@ -44,6 +73,16 @@
       <p>I've created an embedded pico-based sensor display which uses Raspberry Pi Pico and I2C OLED display to show temperature and humidity data.
         I worked on this project in order to further my understanding of embedded systems and raspberry pi picos.
       </p>
+      <div class="skills">
+  <span class="skill-bubble">Embedded Systems</span>
+  <span class="skill-bubble">Raspberry Pi Pico</span>
+  <span class="skill-bubble">MicroPython</span>
+  <span class="skill-bubble">I2C Communication</span>
+  <span class="skill-bubble">Sensor Integration</span>
+  <span class="skill-bubble">Temperature & Humidity Sensors</span>
+  <span class="skill-bubble">Electrical Wiring</span>
+
+</div>
     </div>
     <div class="experience-image">
       <img src="assets/images/rp1.jpg" alt="Rasp-Pi">
@@ -56,6 +95,13 @@
       <p>I've created a weather app which makes use of API calling to display the current weather, humidity and wind speed for any region in the world.
         I've also implemented background animations to play depending on the weather of the searched location. I worked on this project to further my understanding of API-calling and react frameworks.
       </p>
+      <div class="skills">
+  <span class="skill-bubble">ReactJS</span>
+  <span class="skill-bubble">Frontend Development</span>
+  <span class="skill-bubble">UX Design</span>
+  <span class="skill-bubble">TypeScript</span>
+  <span class="skill-bubble">REST APIs</span>
+</div>
     </div>
     <div class="experience-image">
       <img src="assets/images/WA2.png" alt="Weather-App">
@@ -68,9 +114,19 @@
       <p> I worked with a team to create a game called slash out using the unity engine for a student project. Slash Out! Is a game where the player will traverse a 3D environment with 360 degrees of motion. The goal is to avoid projectiles and approach enemies to slash them with a sword which can swing in 8 directions inputted by the user.
         I created this game in order to understand vector math for 3D environments, creating models in Blender as well as understanding object detection and movement in 3D environments.
       </p>
+      <div class="skills">
+  <span class="skill-bubble">Unity Engine</span>
+  <span class="skill-bubble">C#</span>
+  <span class="skill-bubble">3D Game Development</span>
+  <span class="skill-bubble">3D Vector Math</span>
+  <span class="skill-bubble">Blender</span>
+  <span class="skill-bubble">3D Movement</span>
+  <span class="skill-bubble">Game Physics</span>
+</div>
     </div>
     <div class="experience-image">
       <img src="assets/images/SO1.png" alt="Slash-Out">
+      <img src="assets/images/SO2.png" alt="Slash-Out2" class="slash">
     </div>
   </div>
 
@@ -88,5 +144,34 @@
     .then(data => document.getElementById("footer").innerHTML = data);
 </script>
 
+<script>
+    document.addEventListener('DOMContentLoaded', () => {
+      const container = document.querySelector('.background');
+      const exclusionZone = document.querySelector('.experience-section');
+
+      container.addEventListener('mousemove', (e) => {
+        const exclusionRect = exclusionZone.getBoundingClientRect();
+      if (
+        e.clientX >= exclusionRect.left &&
+        e.clientX <= exclusionRect.right &&
+        e.clientY >= exclusionRect.top &&
+        e.clientY <= exclusionRect.bottom
+      ) {
+        container.style.setProperty('--glow-opacity', '0');
+        return;
+      }
+        const rect = container.getBoundingClientRect();
+        const x = e.clientX - rect.left;
+        const y = e.clientY - rect.top;
+        container.style.setProperty('--mouse-x', `${x}px`);
+        container.style.setProperty('--mouse-y', `${y}px`);
+        container.style.setProperty('--glow-opacity', '1');
+      });
+
+      container.addEventListener('mouseleave', () => {
+        container.style.setProperty('--glow-opacity', '0');
+      });
+    });
+  </script>
 </body>
 </html>

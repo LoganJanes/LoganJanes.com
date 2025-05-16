@@ -7,8 +7,13 @@
   <link rel="stylesheet" href="style.css" />
   <link rel="icon" href="favicon.ico" type="image/x-icon">
 </head>
+
 <body>
+  
+  <div id="header"></div>
+
   <div class="page-container">
+
     <div id="header-container"></div>
 
     <main class="about-section">
@@ -45,6 +50,36 @@
     fetch('footer.html')
       .then(response => response.text())
       .then(data => document.getElementById('footer-container').innerHTML = data);
+  </script>
+
+  <script>
+    document.addEventListener('DOMContentLoaded', () => {
+      const container = document.querySelector('.page-container');
+      const exclusionZone = document.querySelector('.about-images-grid-collage');
+
+      container.addEventListener('mousemove', (e) => {
+        const exclusionRect = exclusionZone.getBoundingClientRect();
+      if (
+        e.clientX >= exclusionRect.left &&
+        e.clientX <= exclusionRect.right &&
+        e.clientY >= exclusionRect.top &&
+        e.clientY <= exclusionRect.bottom
+      ) {
+        container.style.setProperty('--glow-opacity', '0');
+        return;
+      }
+        const rect = container.getBoundingClientRect();
+        const x = e.clientX - rect.left;
+        const y = e.clientY - rect.top;
+        container.style.setProperty('--mouse-x', `${x}px`);
+        container.style.setProperty('--mouse-y', `${y}px`);
+        container.style.setProperty('--glow-opacity', '1');
+      });
+
+      container.addEventListener('mouseleave', () => {
+        container.style.setProperty('--glow-opacity', '0');
+      });
+    });
   </script>
 </body>
 </html>
