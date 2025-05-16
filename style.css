@@ -272,13 +272,21 @@ footer {
   border-radius: 10px;
   max-width: 1200px;
   margin: 40px auto;
-  background-color: #fff;
+  background: linear-gradient(-45deg, #0f2027, #203a43, #2c5364, #000000);
+  background-size: 400% 400%;
+  animation: gradientShift 30s ease infinite;
+  padding: 1rem 2rem;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  color: white;
 }
 
 .experience-entry {
   display: flex;
   flex-wrap: nowrap;
-  align-items: flex-start;
+  align-items: center;
   gap: 30px;
   margin-bottom: 50px;
 }
@@ -293,6 +301,9 @@ footer {
   width: 500px;           
   flex-shrink: 0;         
   border-radius: 10px;
+  overflow: hidden;
+  display: flex;
+  flex-wrap: wrap;
 }
 
 
@@ -303,26 +314,14 @@ footer {
   object-fit: contain;
 }
 
-.sub-row {
-  display: flex;
-  align-items: center;
-  flex-wrap: wrap;
-  gap: 0.5rem;
-  max-width: 100%;
-}
 
-.sub {
-  max-width: 48%;
-  height: auto;
-  margin-top: 10px;
-  padding: 0px;
-}
-
-.experience-image img {
+.experience-image img { 
   width: 100%;
   height: auto;
   border-radius: 10px;
-  object-fit: contain;
+  object-fit: cover;
+  display: block;
+  flex: 1 1 48%;  
 }
 
 .experience-text p {
@@ -333,7 +332,7 @@ footer {
 
 .one-line {
   font: bold;
-  color: #000;
+  color: #007bff;
 }
 
 .title {
@@ -399,6 +398,7 @@ footer {
   height: auto;
   display: block;
   margin-bottom: 0.5rem;
+  
 }
 
 .sub-images {
