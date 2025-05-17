@@ -443,3 +443,96 @@ footer {
 .beaumont {
   margin-top: 60px;
 }
+
+@media (max-width: 768px) {
+
+  .about-section {
+    flex-direction: column;
+    padding: 20px;
+    gap: 20px;
+    align-items: center;
+  }
+
+  .about-text {
+    padding: 0;
+    height: auto;
+    text-align: center;
+  }
+
+  .about-text h1 {
+    font-size: 1.8rem;
+  }
+
+  .about-text p {
+    font-size: 1rem;
+  }
+
+  .about-images-grid-collage {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 8px;
+  }
+
+  .about-images-grid-collage img {
+    height: auto;
+  }
+
+  .experience-entry {
+    flex-direction: column;
+    gap: 20px;
+  }
+
+  .experience-image {
+    width: 100%;
+    justify-content: center;
+  }
+
+  .interncomp1 {
+    max-width: 100%;
+  }
+
+  .experience-image img {
+    flex: 1 1 100%;
+  }
+
+  .experience-text {
+    text-align: left;
+    padding: 0 10px;
+  }
+
+  .title {
+    font-size: 1.8rem;
+    padding-left: 0;
+    text-align: center;
+  }
+
+  .sub-images {
+    width: 100%;
+    flex-direction: column;
+  }
+
+  .small-image {
+    width: 100%;
+  }
+
+  .nav-buttons {
+    flex-direction: column;
+    align-items: flex-end;
+    gap: 0.5rem;
+  }
+
+  .nav-btn {
+    font-size: 0.85rem;
+    padding: 0.4rem 0.8rem;
+  }
+
+  .footer-left {
+    text-align: center;
+    width: 100%;
+  }
+
+  footer {
+    flex-direction: column;
+    text-align: center;
+    gap: 1rem;
+  }
+}
